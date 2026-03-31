@@ -1,0 +1,240 @@
+.result-screen {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%);
+  border-radius: 20px;
+  padding: 48px 28px;
+  box-shadow: 0 20px 60px rgba(30, 136, 229, 0.15);
+  animation: slideUp 0.5s ease-out;
+  border: 1px solid rgba(30, 136, 229, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Character Celebration */
+.result-character {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 24px;
+  background: linear-gradient(135deg, #E3F2FD 0%, #E0F2F1 100%);
+  border-radius: 16px;
+  animation: bounce 0.8s ease-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.character-big {
+  font-size: 80px;
+  margin-bottom: 16px;
+  display: block;
+  line-height: 1;
+}
+
+.result-message {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Score Box */
+.score-box {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  padding: 40px 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.score-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.score-number {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.score-divider {
+  font-size: 32px;
+  opacity: 0.8;
+}
+
+.score-total {
+  font-size: 32px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.score-label {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Percentage Box */
+.percentage-box {
+  background: var(--bg-light);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.percentage {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.percentage-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.percentage-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+  border-radius: 4px;
+  transition: width 0.8s ease-out;
+}
+
+/* Category Results */
+.category-results {
+  margin-bottom: 24px;
+}
+
+.category-results h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.category-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.category-score {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Difficulty Info */
+.difficulty-info {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  padding: 12px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.difficulty-info strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Result Buttons */
+.result-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.replay-btn {
+  flex: 1;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.replay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .result-screen {
+    padding: 32px 20px;
+  }
+
+  .character-big {
+    font-size: 64px;
+  }
+
+  .result-message {
+    font-size: 18px;
+  }
+
+  .score-main {
+    gap: 8px;
+  }
+
+  .score-number {
+    font-size: 40px;
+  }
+
+  .score-divider {
+    font-size: 28px;
+  }
+
+  .score-total {
+    font-size: 28px;
+  }
+
+  .percentage {
+    font-size: 28px;
+  }
+}
